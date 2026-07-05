@@ -1,0 +1,7 @@
+build/
+*.o
+*.so
+*.dylib
+.vscode/
+.idea/
+.DS_Store
