@@ -69,7 +69,7 @@ std::vector<double> exact = fmm::direct_sum(particles);  // O(N^2) ground truth
 | 64000  | 889.0    | 4684.8      | 5.3x    | 4.33e-04    |
 | 128000 | 2630.5   | 18700.0     | 7.1x    | 4.28e-04    |
 
-At order $p=4$ (max relative error $\approx 2$–$4 \times 10^{-4}$), FMM overtakes direct evaluation around $N \approx 8{,}000$ particles, and reaches a **16.6× speedup** at $N = 128{,}000$ (3.2s vs 53.7s). Below $\approx 4{,}000$ particles, just use `direct_sum` - it's simpler and faster at small $N$.
+At order $p=4$ (max relative error $\approx 4 \times 10^{-4}$), FMM overtakes direct evaluation around $N \approx 8{,}000$ particles, and reaches a **7.1× speedup** at $N = 128{,}000$ (2.6s vs 18.7s, Apple M-series). Below $\approx 4{,}000$ particles, just use `direct_sum` - it's simpler and faster at small $N$.
 
 To reproduce this plot on your machine (requires `python3` + `matplotlib`):
 
