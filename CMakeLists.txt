@@ -18,6 +18,7 @@ add_library(fmm_core
     src/spherical_harmonics.cpp
     src/multipole.cpp
     src/local.cpp
+    src/fmm_solver.cpp
 )
 
 # --- Unit tests (Catch2, header-only, fetched at configure time) ---
@@ -38,6 +39,7 @@ if(FMM_BUILD_TESTS)
         tests/test_spherical_harmonics.cpp
         tests/test_multipole.cpp
         tests/test_local.cpp
+        tests/test_fmm_solver.cpp
     )
     target_link_libraries(fmm_tests PRIVATE fmm_core Catch2::Catch2WithMain)
 endif()
