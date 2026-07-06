@@ -59,3 +59,10 @@ if(FMM_BUILD_PYTHON)
     pybind11_add_module(fmm_py bindings/pybind_module.cpp)
     target_link_libraries(fmm_py PRIVATE fmm_core)
 endif()
+
+# --- Benchmark driver ---
+option(FMM_BUILD_BENCH "Build benchmark driver" OFF)
+if(FMM_BUILD_BENCH)
+    add_executable(fmm_bench benchmarks/bench_scaling.cpp)
+    target_link_libraries(fmm_bench PRIVATE fmm_core)
+endif()
